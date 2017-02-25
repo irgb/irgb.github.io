@@ -2,9 +2,10 @@ language: node_js
 node_js: stable
 branches:
   only:
-    - source  # only monitor source branch
+    - source
+    - hexo-skeleton
 before_install:
-  - git clean -fd
+  - git fetch origin source:source
   - git checkout source
   - tar zcvf ./source.tar.gz ./*
   - mkdir source
