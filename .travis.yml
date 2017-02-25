@@ -21,4 +21,6 @@ script:
   - hexo g
 
 after_script:
-  hexo d
+  - git config user.name "linjapyc"
+  - git config user.email "linjapyc@gmail.com"
+  - hexo d
