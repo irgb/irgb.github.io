@@ -1,6 +1,6 @@
 ---
 title: Longest Increasing Subsequence
-date: 2017-02-24 13:15:20
+date: 2017-02-24 
 categories: coding
 tags: [leetcode]
 toc: true
