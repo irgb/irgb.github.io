@@ -10,7 +10,7 @@ before_install:
   - mkdir source
   - tar zxvf source.tar.gz -C ./source
   - rm source.tar.gz
-  - git fetch origin hexo-skeleton
+  - git fetch origin hexo-skeleton:hexo-skeleton
   - git checkout hexo-skeleton
 
 install:
