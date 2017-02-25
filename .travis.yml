@@ -28,5 +28,5 @@ after_script:
   - git config user.email "linjapyc@gmail.com"
   - git remote add origin https://${GH_TOKEN}@github.com/irgb/irgb.github.io.git
   - git add .
-  - git commit -am "`date +'%Y-%m-%d %H:%M:%S'`"
+  - git commit -am "`date +'%Y-%m-%d %H:%M:%S %z'`"
   - git push -f origin master:master
