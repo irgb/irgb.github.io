@@ -1,11 +1,10 @@
 ---
-title: Personal Blog Build Integrate Hexo-Github_pages-Travis
+title: 集成 Hexo, Github Pages, Travis 搭建个人博客
 date: 2017-02-25
 categories: tool
 tags: [hexo, github, travis]
 toc: true
 ---
-# 我的博客
 
 Reference 很详细地说明了安装、配置 Github Pages，Hexo，Travis 的方法。这里主要分享一下我的方法。
 https://github.com/irgb/irgb.github.io 中包含3个分支：
