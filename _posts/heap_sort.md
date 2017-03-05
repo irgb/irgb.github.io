@@ -1,7 +1,7 @@
 ---
 title: Heap Sort C++ Implementation
 date: 2017-03-05
-categories: [coding, algorithm]
+categories: algorithm
 tags: [heap, sort]
 description: implement Heap Sort using maximum heap.
 ---

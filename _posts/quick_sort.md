@@ -1,7 +1,7 @@
 ---
 title: Quick Sort C++ Implementation
 date: 2017-03-05
-categories: [coding, algorithm]
+categories: algorithm
 tags: [sort]
 description: Recursive Quick Sort implementation.
 ---
