@@ -3,7 +3,6 @@ title: Genetic Algorithm Hello World
 date: 2017-03-05
 categories: [algorithm]
 tags: [sort]
-description: Recursive Quick Sort implementation.
 ---
 
 [Genetic Algorithm For Hello World](http://www.puremango.co.uk/2010/12/genetic-algorithm-for-hello-world/) is really a great article to understand genetic algorithm. Here is python implementation.
