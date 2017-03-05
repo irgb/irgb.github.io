@@ -1,7 +1,7 @@
 ---
 title: Genetic Algorithm Hello World
 date: 2017-03-05
-categories: [algorithm]
+categories: algorithm
 tags: [genetic, python]
 ---
 
