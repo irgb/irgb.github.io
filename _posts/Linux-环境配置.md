@@ -1,11 +1,11 @@
 ---
-title: Linux 环境配置
+title: Linux 常用配置
 date: 2017-03-28
 categories: linux
 tags: [Linux]
 ---
 
-### [prefix sensitive for previous command searching](http://unix.stackexchange.com/a/96511/205808)
+#### [prefix sensitive for previous command searching](http://unix.stackexchange.com/a/96511/205808)
 
 在 `~/.inputrc 中添加以下配置:
 
