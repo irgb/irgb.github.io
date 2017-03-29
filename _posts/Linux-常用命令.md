@@ -11,3 +11,16 @@ tags: [Linux]
 ```shell
 ls --color=none -lhd /var/* | awk '$1~/^d/ {print $9}' | xargs sudo du -sh`
 ```
+
+#### 按照某一列进行排序
+下面的命令对当前文件夹下的所有文件进行降序排序
+
+```shell
+ls -alhS # -h means --human
+# or
+ls --sort=size -alh
+# or
+ls -al | sort -k 5 -nr # -n 按照字符串的数值比较大小, 会忽略 K, M, G 等单位
+# or
+ls -alh | sort -k 5 -hr # 支持 K, M, G 等 human-kind 单位
+```
