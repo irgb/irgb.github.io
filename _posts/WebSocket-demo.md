@@ -45,7 +45,14 @@ public class ChatWebSocket {
 ```
 用 @ServerEndpoint 注解的 POJO 就是一个 websocket 处理类。servlet 容器启动时会自动加载这些类。@ServerEndpoint 可以包含一个路径参数，这个路径下的所有 websocket 连接都会交给这个类来处理。@OnOpen，@OnMessage，@OnError，@OnClose 都是 websocket 不同事件发生时的回调函数。从字面意思很容易判断其含义。
 
+### Chatroom source code
+```shell
+git clone git@github.com:irgb/websocket-chatroom-demo.git
+git checkout 
+
 ### Reference
 
+- [An Introduction to WebSockets](http://blog.teamtreehouse.com/an-introduction-to-websockets)
+- [websocket brief tutorial](https://www.tutorialspoint.com/html5/html5_websocket.htm)
 - [Jetty WebSocket](https://www.eclipse.org/jetty/documentation/9.4.x/ws-intro-api.html)
 - [websocket heartbeat](http://django-websocket-redis.readthedocs.io/en/latest/heartbeats.html)
