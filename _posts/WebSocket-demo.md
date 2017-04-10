@@ -48,7 +48,11 @@ public class ChatWebSocket {
 ### Chatroom source code
 ```shell
 git clone git@github.com:irgb/websocket-chatroom-demo.git
-git checkout 
+git checkout v1.0
+mvn jetty:run
+```
+在浏览器中打开 http://localhost:8080 即可打开聊天界面
+
 
 ### Reference
 
