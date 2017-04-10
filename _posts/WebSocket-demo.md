@@ -9,7 +9,8 @@ jetty 即实现了 jsr-356 中定义的 websocket 规范（javax.websocket），
 
 为了代码的可移植性，这里采用 javax.websocket。
 
-定义一个 websocket 处理类非常简单，只需要在POJO上添加一些注解即可，servlet 容器会根据这些注解：
+### 实现 websocket 处理类
+定义一个 websocket 处理类非常简单，只需要在 POJO 上添加一些注解即可：
 ```java
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
@@ -38,23 +39,12 @@ public class ChatWebSocket {
     @OnClose
     public void onClose(CloseReason reason, Session session) {
         System.out.println("Websocket clsoed： " + reason.getReasonPhrase());
-        try {
-            String username = session.getQueryString();
-            if (users.containsKey(username) && users.get(username) == session) {
-                users.remove(username);
-                for (String user : users.keySet()) {
-                    users.get(user).getBasicRemote().sendText(username + " leaved this room.");
-                }
-            }
-            if (session.isOpen()) {
-                session.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //do something ...
     }
 }
 ```
+用 @ServerEndpoint 注解的 POJO 就是一个 websocket 处理类。servlet 容器启动时会自动加载这些类。@ServerEndpoint 可以包含一个路径参数，这个路径下的所有 websocket 连接都会交给这个类来处理。@OnOpen，@OnMessage，@OnError，@OnClose
+
 ### Reference
 
 - [Jetty WebSocket](https://www.eclipse.org/jetty/documentation/9.4.x/ws-intro-api.html)
