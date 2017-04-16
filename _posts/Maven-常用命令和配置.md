@@ -50,10 +50,10 @@ mvn clean package
 
 上面的配置同时指定了程序的入口`com.example.app.Main`, 执行命令 `java -jar ./target/my-app-1.0-SNAPSHOT.jar` 可以执行 jar 包。
 
-> 还可以利用 `maven-assembly-plugin` 打包，但这个插件不能解决依赖同一个包的多版本时的冲突问题。
-> 
+> [还可以利用 `maven-assembly-plugin` 打包](https://www.mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/)，但这个插件不能解决依赖同一个包的多版本时的冲突问题。
+
 #### Reference：
-- [Create a fat Jar file – Maven Assembly Plugin](https://www.mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/)
+- [Create a fat Jar file – Maven Shade Plugin](http://www.mkyong.com/maven/create-a-fat-jar-file-maven-shade-plugin/)
 
 ### mvn 命令常用参数
 
