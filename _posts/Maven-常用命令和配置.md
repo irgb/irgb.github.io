@@ -49,8 +49,10 @@ mvn clean package
 - my-app-1.0-SNAPSHOT.jar : with dependencies     
 - original-my-app-1.0-SNAPSHOT.jar : without dependencies
 
-需要注意的是
-上面的配置同时指定了程序的入口`com.example.app.Main`, 执行命令 `java -jar ./target/my-app-1.0-SNAPSHOT.jar` 可以执行 jar 包。
+**Attention**：
+
+- 上面的配置同时指定了程序的入口`com.example.app.Main`, 执行命令 `java -jar ./target/my-app-1.0-SNAPSHOT.jar` 可以执行 jar 包。
+- minimizeJar 配置的作用是最小化 jar 包，即只将程序依赖的 classes 文件加入 jar 包中，这会大大减小包的大小。
 
 > [还可以利用 `maven-assembly-plugin` 打包](https://www.mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/)，但这个插件不能解决依赖同一个包的多版本时的冲突问题。
 
