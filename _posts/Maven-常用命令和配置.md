@@ -54,6 +54,7 @@ mvn clean package
 
 #### Reference：
 - [Create a fat Jar file – Maven Shade Plugin](http://www.mkyong.com/maven/create-a-fat-jar-file-maven-shade-plugin/)
+- [Apache Maven Shade Plugin - shade:shade](http://maven.apache.org/plugins/maven-shade-plugin/shade-mojo.html)
 
 ### mvn 命令常用参数
 
