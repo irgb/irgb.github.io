@@ -49,8 +49,8 @@ mvn clean package
 
 上面的配置同时指定了程序的入口`com.example.app.Main`, 执行命令 `java -jar /path/to/jar-with-dependencies.jar` 可以执行 jar 包。
 
-> 参考：
-	- [](https://www.mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/)
+#### Reference：
+- [Create a fat Jar file – Maven Assembly Plugin](https://www.mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/)
 
 ### mvn 命令常用参数
 
