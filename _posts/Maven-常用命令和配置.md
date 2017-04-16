@@ -42,13 +42,15 @@ tags: [maven]
 在 maven 项目目录下运行命令：
 
 ```shell
-mvn clean package assembly:single
+mvn clean package
 ```
 
 可以看到 target 目录下包含两个 jar 包，较大的一个是加入了依赖的。
 
-上面的配置同时指定了程序的入口`com.example.app.Main`, 所以执行命令 `java -jar /path/to/jar-with-dependencies.jar` 可以运行 jar 包。
+上面的配置同时指定了程序的入口`com.example.app.Main`, 执行命令 `java -jar /path/to/jar-with-dependencies.jar` 可以执行 jar 包。
 
+> 参考：
+	- [](https://www.mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/)
 
 ### mvn 命令常用参数
 
