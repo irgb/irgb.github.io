@@ -15,7 +15,7 @@ tags: [maven]
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-shade-plugin</artifactId>
-            <version>2.3</version>
+            <version>3.0.0</version>
             <executions>
                 <execution>
                     <phase>package</phase>
@@ -23,6 +23,7 @@ tags: [maven]
                         <goal>shade</goal>
                     </goals>
                     <configuration>
+                    	 <minimizeJar>true</minimizeJar>
                         <transformers>
                             <transformer
                                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
@@ -43,11 +44,12 @@ tags: [maven]
 mvn clean package
 ```
 
-可以看到 target 目录下包含两个 jar 包，较大的一个是加入了依赖的：
+可以看到 target 目录下包含两个 jar 包：
 
 - my-app-1.0-SNAPSHOT.jar : with dependencies     
 - original-my-app-1.0-SNAPSHOT.jar : without dependencies
 
+需要注意的是
 上面的配置同时指定了程序的入口`com.example.app.Main`, 执行命令 `java -jar ./target/my-app-1.0-SNAPSHOT.jar` 可以执行 jar 包。
 
 > [还可以利用 `maven-assembly-plugin` 打包](https://www.mkyong.com/maven/create-a-fat-jar-file-maven-assembly-plugin/)，但这个插件不能解决依赖同一个包的多版本时的冲突问题。
