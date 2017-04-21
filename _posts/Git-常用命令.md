@@ -12,3 +12,9 @@ tags: [git]
 ### undo all changes:
 1. git clean -fd # delete all untracked files and directories
 2. git reset \--hard # removes staged and working directory changes
+3. git checkout /path/to/your/file # checkout a file from HEAD, and overwrite your change.
+
+**Reference**:
+
+- [git: revert (reset) a single file](http://www.norbauer.com/rails-consulting/notes/git-revert-reset-a-single-file.html)
+
