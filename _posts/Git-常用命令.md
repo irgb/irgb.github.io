@@ -16,7 +16,7 @@ tags: [git]
 
 ### save HTTPS account
 1. add credential to remote repository url: `https://username:password@git.coding.net/username/repository.git`  
-
+1. store temporarily: git config credential.helper 'cache --timeout=60' , 
 
 **Reference**:
 
