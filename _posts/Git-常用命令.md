@@ -15,8 +15,9 @@ tags: [git]
 3. git checkout /path/to/your/file # checkout a file from HEAD, and overwrite your change.
 
 ### save HTTPS account
-1. edit `~/.git/https-credentials`,  
-2. 
+1. add credential to remote repository url: `https://username:password@git.coding.net/username/repository.git`  
+
+
 **Reference**:
 
 - [git: revert (reset) a single file](http://www.norbauer.com/rails-consulting/notes/git-revert-reset-a-single-file.html)
