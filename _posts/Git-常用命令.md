@@ -15,9 +15,9 @@ tags: [git]
 3. git checkout /path/to/your/file # checkout a file from HEAD, and overwrite your change.
 
 ### save HTTPS account
-1. add credential to remote repository url: `https://username:password@git.coding.net/username/repository.git`  
+1. **(Recommended)** attach credential to remote repository url: `https://username:password@git.coding.net/username/repository.git`  
 1. store temporarily: execute command `git config credential.helper 'cache --timeout=60'`, then credential will expire after 60 seconds since last use.
-2. store permanently: execute command `git config --global credential.helper store`, then credential will be save 
+2. store permanently: execute command `git config --global credential.helper store`, then credential will be stored in file `~/.git-credentials` and `~/.gitconfig` permanently.
 
 **Reference**:
 
