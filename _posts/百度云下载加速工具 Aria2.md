@@ -67,6 +67,6 @@ tags: [tools]
 	
 	安装插件之后，百度云网页上会出现“导出下载”按钮，如下图所示。点击 ARIA2 RPC，aria2 就可以在后台开始下载了。
 	![](https://i.imgsafe.org/132a8da2aa.png)
-3. 在 http://binux.github.io/yaaw/demo/ 中添加如图所示的设置，可以监控下载进度。
+3. 在 https://ziahamza.github.io/webui-aria2/ 中添加如图所示的设置，可以监控下载进度。
 
-	![](https://i.imgsafe.org/133623703f.png)
+	![](https://i.imgsafe.org/135e16dce6.png)
