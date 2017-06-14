@@ -64,4 +64,9 @@ tags: [tools]
 	
 1. 执行 /usr/local/aria2c/bin/aria2c（完整的启动命令是：`aria2c --conf-path="~/.aria2/aria2.conf" -D`）, 用`ps aux|grep aria2c`确认 aria2c 启动成功。
 2. 安装 BaiduExpoter.crx Chrome 插件：https://github.com/acgotaku/BaiduExporter/releases
-3. 
+	
+	安装插件之后，百度云网页上会出现“导出下载”按钮，如下图所示。点击 ARIA2 RPC，aria2 就可以在后台开始下载了。
+	![](https://i.imgsafe.org/132a8da2aa.png)
+3. 在 http://binux.github.io/yaaw/demo/ 中添加如图所示的设置，可以监控下载进度。
+
+	![](https://i.imgsafe.org/132a8da2aa.png)
