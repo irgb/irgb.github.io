@@ -69,4 +69,4 @@ tags: [tools]
 	![](https://i.imgsafe.org/132a8da2aa.png)
 3. 在 http://binux.github.io/yaaw/demo/ 中添加如图所示的设置，可以监控下载进度。
 
-	![](https://i.imgsafe.org/132a8da2aa.png)
+	![](https://i.imgsafe.org/133623703f.png)
