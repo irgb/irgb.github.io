@@ -62,4 +62,6 @@ tags: [tools]
 	touch /Applications/aria2c/aria2.log
 	```
 	
-1. 执行 /usr/local/aria2c/bin/aria2c, 用`ps aux|grep aria2c`确认 aria2c 启动成功。
+1. 执行 /usr/local/aria2c/bin/aria2c（完整的启动命令是：`aria2c --conf-path="~/.aria2/aria2.conf" -D`）, 用`ps aux|grep aria2c`确认 aria2c 启动成功。
+2. 安装 BaiduExpoter.crx Chrome 插件：https://github.com/acgotaku/BaiduExporter/releases
+3. 
