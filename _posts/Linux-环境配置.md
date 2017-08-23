@@ -16,3 +16,10 @@ tags: [Linux]
 "\e[B":history-search-forward
 ```
 
+#### [自动补全忽略大小写](https://askubuntu.com/a/87066/546909)
+
+, 在`~/.inputrc 中添加以下配置：
+
+```shell
+set completion-ignore-case On
+```
