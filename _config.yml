@@ -62,8 +62,14 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+# plugin hexo-generator-sitemap
 sitemap:
   path: sitemap.xml
+  template: ./sitemap_template.xml
+# plugin hexo-directory-category
+auto_dir_categorize:
+    enable: true  # options:true, false; default is true
+    force: false # options:true, false; default is false
 ## Themes: https://hexo.io/themes/
 theme: maupassant
 
@@ -73,3 +79,4 @@ deploy:
   type: git
   repo: https://github.com/irgb/irgb.github.io.git
   branch: master
+

@@ -16,6 +16,8 @@ before_install:
 
 install:
   - npm install
+  - npm install hexo-directory-category --save
+  - npm install hexo-generator-sitemap --save
 
 script:
   - hexo cl
