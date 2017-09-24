@@ -29,9 +29,13 @@ ls -alh | sort -k 5 -hr # 支持 K, M, G 等 human-kind 单位
 ```shell
 iconv -f UTF-8 -t GBK -c /path/to/file
 ```
-> -s: silences warnings \
-> -c: omits invalid characters from output \
-> -f: source encoding \
-> -t: target encoding 
+> -s : silences warnings  
+> -c : omits invalid characters from output  
+> -f : source encoding  
+> -t : target encoding  
 
-
+#### 带颜色的命令行提示符
+```shell
+export PS1="\[\e[37;40m\][\[\e[32;40m\]\u\[\e[33;40m\]@\[\e[32;40m\]\H \[\e[33;40m\]\w\[\e[37;40m \]]\\$ \[\e[37;0m\]"
+alias ls='ls --color'
+```
