@@ -67,3 +67,22 @@ echo 'w1  ,; w2  ,,   w4' | awk -F '[[:blank:],;]+' '{print NF}'
 > 3  
 > 按照连续的空白、',', ';'分割，NF 表示 Number of fields。表示分割之后的 field 的数目。  
 > 参考：[正则表达式](http://dcx.sybase.com/1101/zh/dbreference_zh11/rf-sqllanguage-s-4915351.html)
+
+
+#### 去重, 统计单词数目
+
+```shell
+echo "
+line1
+line1
+line2
+line3
+line3" | uniq
+```
+
+> 结果为：  
+> line1  
+> line2  
+> line3  
+
+    
