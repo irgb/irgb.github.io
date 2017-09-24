@@ -113,5 +113,17 @@ ll --color=never | awk '{print $9}' | xargs du -s | sort -k 1 -r -g
 ```shell
 sed 's/word1/word2/g' /path/to/file # 将文件中所有的 word1 替换成 word2，并将结果打印到终端
 sed -i 's/word1/word2/g' /path/to/file # in-place replace
-sed -i'.orig' 's/word1/word2/g' /path/to/file 
+sed -i'.bak' 's/word1/word2/g' /path/to/file # in-place replace and back up original file
 ```
+
+例子：
+```shell
+sed -i '/^$/N;/^\n$/D' /path/to/file # 删除多余的空行
+```
+
+> 更多关于 sed 的用法参考：
+> [15 Useful ‘sed’ Command Tips and Tricks](https://www.tecmint.com/linux-sed-command-tips-tricks/)
+
+#### 比较两个命令的执行结果有什么不同
+```
+diff 
