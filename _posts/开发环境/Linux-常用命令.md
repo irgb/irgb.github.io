@@ -110,3 +110,6 @@ ll --color=never | awk '{print $9}' | xargs du -s | sort -k 1 -r -g
 > --color : 去掉 ll 或 ls 命令的颜色  
 
 #### 文本替换
+```shell
+# 
+```
