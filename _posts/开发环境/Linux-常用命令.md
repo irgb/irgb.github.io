@@ -85,3 +85,13 @@ This is line2" | uniq
 > This is line2  
 > `uniq -c` 表示统计形同行的数目
 
+例子：
+```shell
+echo "word1 word1 word2 word2 word2" | xargs -n1 | uniq -c
+```
+> 一个简单的 wordcount 程序。其中 `xargs -n1` 用于把每个单词转成一行。
+
+#### 文件排序
+```shell
+sort 
+```
