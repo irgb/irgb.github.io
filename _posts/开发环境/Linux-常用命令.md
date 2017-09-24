@@ -50,7 +50,9 @@ wc -w /path/to/file # word count
 cut -d '\t' -f 1 total # cut 只支持单个字符分割，默认是\t
 awk '{print $9}' # awk 默认可以分割连续的空格
 awk -F ',' '{print $1, $2}' # 按照字符','进行分割，并打印第1，2列
-awk -F '[, ;]' '{print $1, $2}' # 按照',', ' ' 或 ';' 进行分割，并打印出第1，2列
+awk -F '[, ;]' '{print $1}' # 按照',', ' ' 或 ';' 进行分割
+awk -F 'SEP' '{print $1}' # 按照字符串“SEP”进行分割
 ```
+
 例如：
-```
+```shell
