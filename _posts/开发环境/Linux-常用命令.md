@@ -69,7 +69,7 @@ echo 'w1  ,; w2  ,,   w4' | awk -F '[[:blank:],;]+' '{print NF}'
 > 参考：[正则表达式](http://dcx.sybase.com/1101/zh/dbreference_zh11/rf-sqllanguage-s-4915351.html)
 
 
-#### 文本行去重
+#### 文本行去重，相同行数统计
 
 ```shell
 echo "
@@ -82,6 +82,6 @@ This is line2" | uniq
 
 > 结果为：  
 > This is line1  
-> This is line2 
+> This is line2  
+> `uniq -c` 表示统计形同行的数目
 
-    
