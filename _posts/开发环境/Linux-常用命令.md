@@ -125,5 +125,11 @@ sed -i '/^$/N;/^\n$/D' /path/to/file # 删除多余的空行
 > [15 Useful ‘sed’ Command Tips and Tricks](https://www.tecmint.com/linux-sed-command-tips-tricks/)
 
 #### 比较两个命令的执行结果有什么不同
+```shell
+diff <(command1) <(command2)
 ```
-diff 
+> diff 命令只能比较两个文件的不同，所以为了比较两个命令的输出，要把输出转换成一个文件名传递给 diff，这种技术叫做“Process Substitution”，参考：  
+> [How do I diff the output of two commands](https://askubuntu.com/a/229450/546909)  
+> [Process Substitution](http://www.gnu.org/software/bash/manual/bash.html#Process-Substitution)
+
+例子：
