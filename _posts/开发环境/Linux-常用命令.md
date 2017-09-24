@@ -47,5 +47,7 @@ wc -w /path/to/file # word count
 
 #### 获取文本的第 k 列
 ```shell
-cut -d'\t' -f1 total # cut 只支持单个字符分割，默认是\t
-awk '{print $9}' #
+cut -d '\t' -f 1 total # cut 只支持单个字符分割，默认是\t
+awk '{print $9}' # 
+awk -F '[, ;]' '{print $1, $2}' # 按照',', ' ', ';' 进行分割，并打印出第1，2列
+```
