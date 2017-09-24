@@ -133,3 +133,6 @@ diff <(command1) <(command2)
 > [Process Substitution](http://www.gnu.org/software/bash/manual/bash.html#Process-Substitution)
 
 例子：
+```shell
+diff <(ack "word1" | cut -d ':' -f1 | uniq) <(ack "word2" | cut -d ':' -f1 | uniq) # 比较包含 word1 的文件和包含 word2 的文件有哪些不同
+```
