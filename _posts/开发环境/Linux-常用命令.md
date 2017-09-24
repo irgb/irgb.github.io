@@ -69,20 +69,19 @@ echo 'w1  ,; w2  ,,   w4' | awk -F '[[:blank:],;]+' '{print NF}'
 > 参考：[正则表达式](http://dcx.sybase.com/1101/zh/dbreference_zh11/rf-sqllanguage-s-4915351.html)
 
 
-#### 去重, 统计单词数目
+#### 文本行去重
 
 ```shell
 echo "
-line1
-line1
-line2
-line3
-line3" | uniq
+This is line1
+This is line1
+This is line2
+This is line2
+This is line2" | uniq
 ```
 
 > 结果为：  
-> line1  
-> line2  
-> line3  
+> This is line1  
+> This is line2 
 
     
