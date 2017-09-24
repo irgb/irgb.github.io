@@ -29,7 +29,7 @@ ls -alh | sort -k 5 -hr # 支持 K, M, G 等 human-kind 单位
 ```shell
 iconv -f UTF-8 -t GBK -c /path/to/file
 ```
-> -s : silences warnings  
+> -s : silences warnings
 > -c : omits invalid characters from output  
 > -f : source encoding  
 > -t : target encoding  
