@@ -39,3 +39,17 @@ iconv -f UTF-8 -t GBK -c /path/to/file
 export PS1="\[\e[37;40m\][\[\e[32;40m\]\u\[\e[33;40m\]@\[\e[32;40m\]\H \[\e[33;40m\]\w\[\e[37;40m \]]\\$ \[\e[37;0m\]"
 alias ls='ls --color'
 ```
+
+#### 修改 history 命令的最大条数
+在`~/.bashrc`中添加以下配置
+```shell
+HISTFILESIZE=1000
+HISTSIZE=1000
+```
+
+####  使TAB 键的命令自动补全忽略大小写
+在`~/.inputrc`中添加：
+```shell
+set completion-ignore-case On
+```
+
