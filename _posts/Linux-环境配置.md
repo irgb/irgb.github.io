@@ -6,8 +6,6 @@ tags: [Linux]
 ---
 
 #### `~/.inputrc` 配置
-#### [prefix sensitive for previous command searching](http://unix.stackexchange.com/a/96511/205808)
-
 ```shell
 # [Tab auto-completion case-insensitive](https://askubuntu.com/a/87066/546909)
 set completion-ignore-case On
@@ -18,10 +16,11 @@ set completion-ignore-case On
 "\e[B":history-search-forward
 ```
 
-#### [自动补全忽略大小写](https://askubuntu.com/a/87066/546909)
+#### `~/.bashrc`配置
 
 , 在`~/.inputrc 中添加以下配置：
 
 ```shell
-
+export PS1="\[\e[37;40m\][\[\e[32;40m\]\u\[\e[33;40m\]@\[\e[32;40m\]\H \[\e[33;40m\]\w\[\e[37;40m \]]\\$ \[\e[37;0m\]" # colorful command line prompt
+alias ls='ls --color' # colorful ls result
 ```
