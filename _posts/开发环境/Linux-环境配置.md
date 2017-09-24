@@ -1,7 +1,6 @@
 ---
 title: Linux 常用配置
 date: 2017-03-28
-categories: 开发环境
 tags: [Linux]
 ---
 
