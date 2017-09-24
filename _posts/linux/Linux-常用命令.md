@@ -34,10 +34,4 @@ iconv -f UTF-8 -t GBK -c /path/to/file
 > -f : source encoding  
 > -t : target encoding  
 
-#### 修改 history 命令的最大条数
-在`~/.bashrc`中添加以下配置
-```shell
-HISTFILESIZE=1000
-HISTSIZE=1000
-```
 

@@ -21,6 +21,11 @@ set completion-ignore-case On
 , 在`~/.inputrc 中添加以下配置：
 
 ```shell
-export PS1="\[\e[37;40m\][\[\e[32;40m\]\u\[\e[33;40m\]@\[\e[32;40m\]\H \[\e[33;40m\]\w\[\e[37;40m \]]\\$ \[\e[37;0m\]" # colorful command line prompt
-alias ls='ls --color' # colorful ls result
+# colorful command line prompt
+export PS1="\[\e[37;40m\][\[\e[32;40m\]\u\[\e[33;40m\]@\[\e[32;40m\]\H \[\e[33;40m\]\w\[\e[37;40m \]]\\$ \[\e[37;0m\]"
+# colorful ls result
+alias ls='ls --color'
+# increase command listory to 10000 items
+HISTFILESIZE=10000
+HISTSIZE=10000
 ```
