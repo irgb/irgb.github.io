@@ -55,4 +55,15 @@ awk -F 'SEP' '{print $1}' /path/to/file # 按照字符串“SEP”进行分割
 ```
 
 例如：
+
 ```shell
+echo "word1SEPword2" | awk -F 'SEP' '{print $1, $2}'
+```
+> word1 word2
+
+```shell
+echo 'w1  ,; w2  ,,   w4' | awk -F '[[:blank:],;]+' '{print NF}'
+```
+> 3  
+> 按照连续的空白、',', ';'分割，NF 表示 Number of fields。表示分割之后的 field 的数目。  
+> 参考：[正则表达式](http://dcx.sybase.com/1101/zh/dbreference_zh11/rf-sqllanguage-s-4915351.html)
