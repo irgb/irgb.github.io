@@ -93,5 +93,7 @@ echo "word1 word1 word2 word2 word2" | xargs -n1 | uniq -c
 
 #### 文件排序
 ```shell
-sort 
+sort /path/to/file # 对文本行进行字符串排序
+sort -k 2 /path/to/file # 按照第2列排序，默认分隔符为' ', '\t'，注意不支持连续分隔符
+sort -k 2 -t ';' /path/to/file # 用';'作为分隔符，并按第2列排序
 ```
