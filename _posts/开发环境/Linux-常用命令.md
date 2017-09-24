@@ -111,5 +111,7 @@ ll --color=never | awk '{print $9}' | xargs du -s | sort -k 1 -r -g
 
 #### 文本替换
 ```shell
-# 
+sed 's/word1/word2/g' /path/to/file # 将文件中所有的 word1 替换成 word2，并将结果打印到终端
+sed -i 's/word1/word2/g' /path/to/file # in-place replace
+sed -i'.orig' 's/word1/word2/g' /path/to/file 
 ```
