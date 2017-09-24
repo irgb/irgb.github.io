@@ -38,3 +38,14 @@ iconv -f UTF-8 -t GBK -c /path/to/file
 ```shell
 jar -tf test.jar
 ```
+
+#### 统计文件行数或单词数
+```shell
+wc -l /path/to/file # line count
+wc -w /path/to/file # word count
+```
+
+#### 获取文本的第 k 列
+```shell
+cut -d'\t' -f1 total # cut 只支持单个字符分割，默认是\t
+awk '{print $9}' #
