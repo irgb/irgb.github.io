@@ -1,7 +1,7 @@
 ---
 title: Linux 常用命令
 date: 2017-03-29
-categories: linux
+categories: 开发环境
 tags: [Linux]
 ---
 

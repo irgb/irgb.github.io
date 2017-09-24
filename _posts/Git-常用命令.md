@@ -1,7 +1,7 @@
 ---
 title: Git 常用命令
 date: 2017-04-04
-categories: linux
+categories: 开发环境
 tags: [git]
 ---
 
