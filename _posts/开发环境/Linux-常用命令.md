@@ -44,6 +44,12 @@ wc -l /path/to/file # line count
 wc -w /path/to/file # word count
 ```
 
+#### 获取文件指定行
+```
+sed -n 5,10p /path/to/file
+```
+> 获取文件的第5-10行
+
 #### 获取文本的第 k 列
 ```shell
 cut -d '\t' -f 1 total # cut 只支持单个字符分割，默认是\t
