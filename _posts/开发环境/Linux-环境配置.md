@@ -25,6 +25,13 @@ export PS1="\[\e[37;40m\][\[\e[32;40m\]\u\[\e[33;40m\]@\[\e[32;40m\]\H \[\e[33;4
 # colorful ls result
 alias ls='ls --color'
 # increase command listory to 10000 items
-HISTFILESIZE=10000
-HISTSIZE=10000
+HISTFILESIZE=100000
+HISTSIZE=100000
+export HISTCONTROL=ignoredups:erasedups # no duplicate entries
+shopt -s histappend  # append to history, don't overwrite it
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 ```
+
+> ²Î¿¼£º  
+> 1. [Preserve bash history in multiple terminal windows](https://unix.stackexchange.com/a/48113/205808)
