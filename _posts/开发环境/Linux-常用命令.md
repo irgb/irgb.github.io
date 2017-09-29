@@ -151,6 +151,20 @@ sudo netstat -ap | grep 8080
 #### 文件传输
 rsync 比 scp 更加方便，快速
 ```shell
-#把 src (文件或文件夹) 放在 dest 目录下
+# 把 src (文件或文件夹) 放在 dest 目录下，即 dest 目录下会多出一个 src 目录
 rsync -avz ./src  ./dest
+# src目录下的所有文件同步到dest下，dest下不会产生src文件夹
+rsync -avz ./src/  ./dest
+rsync -avz ./src  ./dest/
+# 目录完全同步，如果src中的某个文件被删除之后，dest中的也会被删除
+rsync --delete   -avz ./src/  ./dest 
+# 跳过上传 bin 和 log 目录
+rsync -zavP --exclude='bin' --exclude='log'  ./src/ ./dest
+# 远程传输
+rsync -vzP username@host:/path/to/src username@host:/path/to/dest
 ```
+> -a 表示递归上传，并保持所有属性  
+> -v表示上传过程中显示上传信息，包括正在上传的文  件，以及总共上传的字节数等  
+> -z表示在传输过程中将使用压缩  
+> -P表示显示上传进度  
+> -u表示更新操作，上传时将跳过修改时间比要上传的文件新的文件  
