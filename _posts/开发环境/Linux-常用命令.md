@@ -147,3 +147,10 @@ diff <(ack "word1" | cut -d ':' -f1 | uniq) <(ack "word2" | cut -d ':' -f1 | uni
 sudo lsof -i:8080
 sudo netstat -ap | grep 8080
 ```
+
+#### 文件传输
+rsync 比 scp 更加方便，快速
+```shell
+#把 src (文件或文件夹) 放在 dest 目录下
+rsync -avz ./src  ./dest
+```
