@@ -33,5 +33,5 @@ shopt -s histappend  # append to history, don't overwrite it
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 ```
 
-> ²Î¿¼£º  
+> å‚è€ƒèµ„æ–™ï¼š  
 > 1. [Preserve bash history in multiple terminal windows](https://unix.stackexchange.com/a/48113/205808)
