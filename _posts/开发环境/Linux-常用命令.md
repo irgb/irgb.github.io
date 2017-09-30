@@ -193,4 +193,4 @@ printf "line1.cpp\nline2.h\nline3.log" | awk '!/(cpp|h)/{print $0}'
 ```
 
 > $0 表示整行，$n 表示第 n 行  
-> 
+> `'!/(cpp|h)/{print $0}'` 中感叹号表示不匹配   
