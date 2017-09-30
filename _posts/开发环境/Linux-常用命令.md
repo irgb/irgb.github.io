@@ -177,4 +177,7 @@ sshpass -p password ssh username@host
 #### awk
 ```shell
 # 字符串拼接
+echo "hello world" | awk '{print "prefix_" $1}' # 输出为 prefix_hello
+# 匹配指定模式的行
+
 ```
