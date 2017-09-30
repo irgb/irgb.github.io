@@ -179,5 +179,18 @@ sshpass -p password ssh username@host
 # 字符串拼接
 echo "hello world" | awk '{print "prefix_" $1}' # 输出为 prefix_hello
 # 匹配指定模式的行
-
+# 下面命令结果为
+# line2.h
+printf "line1.cpp\nline2.h\nline3.log" | awk '/2/{print $0}' 
+# 下面命令结果为
+# line1.cpp 
+# line2.h
+printf "line1.cpp\nline2.h\nline3.log" | awk '/(cpp|h)/{print $0}'
+# 不匹配符合条件的行
+# 下面命令结果为
+# line3.log
+printf "line1.cpp\nline2.h\nline3.log" | awk '!/(cpp|h)/{print $0}'
 ```
+
+> $0 表示整行，$n 表示第 n 行  
+> 
