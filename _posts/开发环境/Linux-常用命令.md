@@ -108,7 +108,7 @@ sort -k 2 -t ';' /path/to/file # 用';'作为分隔符，并按第2列排序
 > -h : 可以排序以 K, M, G 为单位的数字，只有新版本的 sort 支持这个参数
 
 例子：
-```
+```shell
 ll --color=never | awk '{print $9}' | xargs du -s | sort -k 1 -r -g
 ```
 > 功能：对当前目录下的所有文件夹从大到小排序  
@@ -167,4 +167,14 @@ rsync -vzP username@host:/path/to/src username@host:/path/to/dest
 > -v表示上传过程中显示上传信息，包括正在上传的文  件，以及总共上传的字节数等  
 > -z表示在传输过程中将使用压缩  
 > -P表示显示上传进度  
-> -u表示更新操作，上传时将跳过修改时间比要上传的文件新的文件  
+> -u表示更新操作，上传时将跳过修改时间比要上传的文件新的文件   
+
+#### ssh, scp, rsync 自动输入密码
+```shell
+sshpass -p password ssh username@host
+```
+
+#### awk
+```shell
+# 字符串拼接
+```
