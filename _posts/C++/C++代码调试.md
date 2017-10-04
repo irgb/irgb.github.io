@@ -11,5 +11,6 @@ tags: [c++ gcc]
 
 
 #### 参考资料
-[What is the difference between g++ and gcc?](https://stackoverflow.com/questions/172587/what-is-the-difference-between-g-and-gcc)
-[gdb - How to view a pointer like an array?](https://stackoverflow.com/a/14502287/5432806)
+- [What is the difference between g++ and gcc?](https://stackoverflow.com/questions/172587/what-is-the-difference-between-g-and-gcc)
+- [gdb - How to view a pointer like an array?](https://stackoverflow.com/a/14502287/5432806)
+- [解决GDB在Mac下不能调试的问题](https://segmentfault.com/a/1190000004136351)
