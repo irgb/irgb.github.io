@@ -1,12 +1,12 @@
 ---
-title: C++ 代码调试
+title: C++ 浠ｇ爜璋冭瘯
 date: 2017-09-26
 categories: C++
 tags: [c++ gcc]
 ---
 
 #### gdb
-使用条件：编译时加入 debug 信息，即 `gcc -g`.
+浣跨敤鏉′欢锛氱紪璇戞椂鍔犲叆 debug 淇℃伅锛屽嵆 `gcc -g`.
 
-#### 参考资料
-- [解决GDB在Mac下不能调试的问题](https://segmentfault.com/a/1190000004136351)
+#### 鍙傝€冭祫鏂�
+- [瑙ｅ喅GDB鍦∕ac涓嬩笉鑳借皟璇曠殑闂](https://segmentfault.com/a/1190000004136351)
