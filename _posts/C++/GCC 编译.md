@@ -4,7 +4,7 @@ date: 2017-09-26
 categories: C++
 tags: [c++ gcc]
 ---
-#### gcc、g++ 常用编译参数
+### gcc、g++ 常用编译参数
 - -E : 预处理，处理结果输出到标准输出，如果需要输出到文件，需要使用 -o 参数，通常用 '.i' 作为后缀.
 - -S : 编译，生成汇编代码。默认输出到文件，后缀为 '.s'.
 - -c : 汇编，把C/C++代码或汇编代码转成可执行文件，默认输出到文件，后缀为 '.o'.
@@ -20,12 +20,16 @@ tags: [c++ gcc]
 - -i : 指定所需的头文件。
 - -I : 指定所需的头文件所在的目录。g++可以自动在目录中搜索需要的头文件，所以 '-i' 参数很少使用.
 - -Wall : 显示所有编译警告信息
+- -Werror : 把所有警告当做错误处理
 - -w : 关闭所有警告信息
 
+#### 参考资料：
+- [What is the difference between g++ and gcc?](https://stackoverflow.com/questions/172587/what-is-the-difference-between-g-and-gcc)
+- [gdb - How to view a pointer like an array?](https://stackoverflow.com/a/14502287/5432806)
+- [GCC Warning-Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)  
 
-## 发生类型转换错误：
+### 发生类型转换错误：
 如果指定了-Werror 会把所有的 warning 当做 error。如果要抑制部分 warning，如unsigned int 转 int 等，可以添加编译参数 `-Wno-error=sign-conversion`。
 
 > 参考：  
-> [GCC Warning-Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)  
-> [C++ Implicit Conversion](http://en.cppreference.com/w/cpp/language/implicit_conversion)
+> - [C++ Implicit Conversion](http://en.cppreference.com/w/cpp/language/implicit_conversion)
