@@ -12,7 +12,10 @@ tags: [c++ gcc]
 > 从 C/C++ 代码到可执行文件分成四个步骤：预处理、编译、汇编、链接，可以用参数来一步步执行。  
 
 - -O : 指定编译优化级别，共 0~3 四个级别, 默认为 '-O0', 即不用任何优化，'-O' 等价于 '-O1'. 参考：[GCC optimization levels](https://stackoverflow.com/a/1778700/5432806)
-
+- -g : 在生成的可执行文件中加入调试信息。
+- -L : 指定库所在的目录
+- -l : 指定链接时要链接的库
+> 如库 libtest.a 保存在目录 '/home/lib' 下，编译的时候需用命令 `g++ -L/home/lib -ltest main.cpp -o main`, 否则会出现
 #### gdb
 使用条件：编译时加入 debug 信息，即 `gcc -g`.
 
