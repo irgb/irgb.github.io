@@ -15,8 +15,19 @@ gdb <program> <PID>  # 调试已经启动的程序
 ```
 
 #### 常用命令
+
+- b : break. 给程序加断点
+  - b n : 在第 n 行处加断点
+  - b fun : 在函数 fun 的入口处加断点
+  - 
 - r : run. 启动程序，直到第一个断点处，或等待用户输入
 - c : continue. 继续执行，直到下一个断点处，或等待用户输入
+- n : next. 执行下一条语句，不进入函数内部
+- s : step. 执行下一条语句，进入函数内部 
+- until : 
 #### 参考资料
 - [gdb 调试利器](http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html)
+- [](http://xuwenjie.blog.51cto.com/6978573/1192028)
+- [](https://blogs.gnome.org/raywang/page/23/)
+- [](http://www.cnblogs.com/xsln/p/gdb_instructions1.html)
 - [解决gdb在Mac下不能调试的问题](https://segmentfault.com/a/1190000004136351)
