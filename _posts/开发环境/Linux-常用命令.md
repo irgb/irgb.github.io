@@ -194,3 +194,9 @@ printf "line1.cpp\nline2.h\nline3.log" | awk '!/(cpp|h)/{print $0}'
 
 > $0 表示整行，$n 表示第 n 行  
 > `'!/(cpp|h)/{print $0}'` 中感叹号表示不匹配   
+
+#### 文件查找
+```shell
+find /path -name "*.c" # 查找后缀为.c 的文件
+find /path -name "*.c" -o -name "*.cpp" #同时查找后缀为.c 和 .cpp 的文件
+```
