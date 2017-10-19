@@ -200,3 +200,9 @@ printf "line1.cpp\nline2.h\nline3.log" | awk '!/(cpp|h)/{print $0}'
 find /path -name "*.c" # 查找后缀为.c 的文件
 find /path -name "*.c" -o -name "*.cpp" #同时查找后缀为.c 和 .cpp 的文件
 ```
+
+#### 进程监控
+```
+pstree -p <pid> # 根据进程号查看线程号
+pstree -p `ps -e | grep retrms | cut -d' ' -f1` | wc -l # 查看进程 retrms 的线程数
+```
