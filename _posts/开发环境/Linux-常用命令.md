@@ -157,7 +157,7 @@ rsync -avz ./src  ./dest
 rsync -avz ./src/  ./dest
 rsync -avz ./src  ./dest/
 # 目录完全同步，如果src中的某个文件被删除之后，dest中的也会被删除
-rsync --delete   -avz ./src/  ./dest 
+rsync --delete  -avz ./src/  ./dest 
 # 跳过上传 bin 和 log 目录
 rsync -zavP --exclude='bin' --exclude='log'  ./src/ ./dest
 # 远程传输
@@ -205,4 +205,9 @@ find /path -name "*.c" -o -name "*.cpp" #同时查找后缀为.c 和 .cpp 的文
 ```
 pstree -p <pid> # 根据进程号查看线程号
 pstree -p `ps -e | grep retrms | cut -d' ' -f1` | wc -l # 查看进程 retrms 的线程数
+```
+
+#### wget
+```
+wget -r -np ftp://hostname/home/username/directory # 下载文件夹
 ```
