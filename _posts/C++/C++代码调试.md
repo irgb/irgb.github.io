@@ -34,12 +34,14 @@ gdb <program> <PID>  # 调试已经启动的程序
 - s : step. 执行下一条语句，进入函数内部
   - x/i $pc : 显示下一条要执行的指令
   - si : 执行下一条指令
+  - si n : 执行后 n 条指令
 - until : 运行程序知道退出循环
   - until n : 运行至第 n 行
 - disassemble /rm : 查看当前栈帧的汇编代码, /r : 显示16进制的指令号; /m : 显示相应的源码
 - i registers : 打印当前寄存器的值
   - i registers rbp rsp : 显示寄存器 rbp，rsp 的值
 - set $rsp -= 0x10 : 设置寄存器 rsp 的值
+- set $tmp = 0 : 设置临时变量 tmp
 - k : kill. 杀掉进程
 - shell ls : 执行 shell 命令
 
