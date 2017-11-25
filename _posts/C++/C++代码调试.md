@@ -24,6 +24,7 @@ gdb <program> <PID>  # 调试已经启动的程序
 - c : continue. 继续执行，直到下一个断点处，或等待用户输入
 - n : next. 执行下一条语句，不进入函数内部
 - s : step. 执行下一条语句，进入函数内部 
+- k : kill. 杀掉进程
 - until : 
 - shell ls : 执行 shell 命令
 
