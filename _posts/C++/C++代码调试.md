@@ -59,6 +59,12 @@ set history save on
 set history size 1000
 ```
 
+#### cgdb
+**优点**:
+
+- 比 gdb 更加好用的调试工具，调试时可以同步看到源码
+- 自动保存命令历史
+
 #### 参考资料
 - [gdb 调试利器](http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html)
 - [](http://xuwenjie.blog.51cto.com/6978573/1192028)
