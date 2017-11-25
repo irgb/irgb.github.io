@@ -31,7 +31,7 @@ gdb <program> <PID>  # 调试已经启动的程序
 在 gdb 中执行：
 
 ```shell
-set history filename .gdb_history
+set history filename ~/.gdb_history
 set history save on
 set history size 1000
 ```
