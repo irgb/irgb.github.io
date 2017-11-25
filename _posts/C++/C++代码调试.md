@@ -45,6 +45,10 @@ gdb <program> <PID>  # 调试已经启动的程序
 - set $tmp = 0 : 设置临时变量 tmp
 - k : kill. 杀掉进程
 - shell ls : 执行 shell 命令
+- p var : 打印变量 var 的值
+- whatis var : 显示变量 var 的类型
+- pt var : ptype. 显示变量 var 的类型的定义
+- 
 
 #### [启用gdb命令历史](https://stackoverflow.com/a/3176802/5432806)
 在 ~/.gdbinit 中添加：
