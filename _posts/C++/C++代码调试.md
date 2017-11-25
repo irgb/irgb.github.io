@@ -28,7 +28,7 @@ gdb <program> <PID>  # 调试已经启动的程序
 - shell ls : 执行 shell 命令
 
 #### [启用命令历史](https://stackoverflow.com/a/3176802/5432806)
-在 ~/.gdbinit 中执行：
+在 ~/.gdbinit 中添加：
 
 ```shell
 set history filename ~/.gdb_history
