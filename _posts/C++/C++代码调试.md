@@ -25,6 +25,17 @@ gdb <program> <PID>  # 调试已经启动的程序
 - n : next. 执行下一条语句，不进入函数内部
 - s : step. 执行下一条语句，进入函数内部 
 - until : 
+- shell ls : 执行 shell 命令
+
+#### 启用命令历史
+在 gdb 中执行：
+
+```shell
+set history filename .gdb_history
+set history save on
+set history size 1000
+```
+
 #### 参考资料
 - [gdb 调试利器](http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html)
 - [](http://xuwenjie.blog.51cto.com/6978573/1192028)
