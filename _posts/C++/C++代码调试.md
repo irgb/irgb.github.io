@@ -19,6 +19,7 @@ gdb <program> <PID>  # 调试已经启动的程序
 - bt : backtrace. 显示当前调用栈
 - f n : 切换到第 n 个栈帧
 - i locals : 查看当前栈帧包含的局部变量
+- i threads : 查看当前进程的线程
 - b : break. 给程序加断点
   - i b : 查看当前所有断点信息
   - b n : 在当前栈帧所属的文件的第 n 行处加断点
@@ -31,9 +32,10 @@ gdb <program> <PID>  # 调试已经启动的程序
 - c : continue. 继续执行，直到下一个断点处，或等待用户输入
 - n : next. 执行下一条语句，不进入函数内部
 - s : step. 执行下一条语句，进入函数内部 
-- k : kill. 杀掉进程
 - until : 运行程序知道退出循环
     - until n : 运行至第 n 行
+- disassemble /rm : 查看当前栈帧的汇编代码, /r : 显示16进制的指令号
+- k : kill. 杀掉进程
 - shell ls : 执行 shell 命令
 
 #### [启用gdb命令历史](https://stackoverflow.com/a/3176802/5432806)
