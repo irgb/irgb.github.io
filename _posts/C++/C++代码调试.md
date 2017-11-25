@@ -28,6 +28,7 @@ gdb <program> <PID>  # 调试已经启动的程序
   - disable n : 暂时禁用断点 n
   - enable n : 启用断点 n
   - d breakpoints : 删除所有断点
+- watch $rbx == 0x00ffffff00 : 监控寄存器，当值为 0x00ffffff00 时暂停，和加断点是一样的效果，同样也可监控变量的值
 - r : run. 启动程序，直到第一个断点处，或等待用户输入
 - c : continue. 继续执行，直到下一个断点处，或等待用户输入
 - n : next. 执行下一条语句，不进入函数内部
@@ -48,7 +49,6 @@ gdb <program> <PID>  # 调试已经启动的程序
 - p var : 打印变量 var 的值
 - whatis var : 显示变量 var 的类型
 - pt var : ptype. 显示变量 var 的类型的定义
-- watch $rbx == 0x00ffffff00 : 监控寄存器，当值为 0x00ffffff00 时暂停，和加断点是一样的效果，同样也可监控变量的值
 
 #### [启用gdb命令历史](https://stackoverflow.com/a/3176802/5432806)
 在 ~/.gdbinit 中添加：
