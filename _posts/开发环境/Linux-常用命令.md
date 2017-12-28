@@ -150,6 +150,7 @@ sudo netstat -ap | grep 8080
 
 #### 文件传输
 rsync 比 scp 更加方便，快速
+
 ```shell
 # 把 src (文件或文件夹) 放在 dest 目录下，即 dest 目录下会多出一个 src 目录
 rsync -avz ./src  ./dest
@@ -175,6 +176,7 @@ sshpass -p password ssh username@host
 ```
 
 #### awk
+
 ```shell
 # 字符串拼接
 echo "hello world" | awk '{print "prefix_" $1}' # 输出为 prefix_hello
@@ -205,6 +207,13 @@ find /path -name "*.c" -o -name "*.cpp" #同时查找后缀为.c 和 .cpp 的文
 ```
 pstree -p <pid> # 根据进程号查看线程号
 pstree -p `ps -e | grep retrms | cut -d' ' -f1` | wc -l # 查看进程 retrms 的线程数
+```
+
+#### 获取文件夹下所有文件列表（递归地）
+
+```shell
+find -L /path/to/directory
+tree -if /path/to/directory
 ```
 
 #### wget
