@@ -166,3 +166,4 @@ g++ -std=c++11 main.cpp plugin1.cpp plugin2.cpp -o main
 ](https://stackoverflow.com/a/5451094/5432806)
 - [Compile-Time Plugin System(github)](https://gist.github.com/Cilyan/a8117124b04b64642646)
 - [Compile-time plugin system(stackoverflow)](https://codereview.stackexchange.com/questions/119812/compile-time-plugin-system)
+- [](https://stackoverflow.com/a/26950454/5432806)
