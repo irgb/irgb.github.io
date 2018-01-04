@@ -58,20 +58,28 @@ public:
         return singleton;
     }
 
-    typedef std::function<Base*()> Creator;
+    typedef std::function<Base*()> CreatorFunc;
     // ATTENTION: can not use register as function name, becase register is a keyword in C++11
-    bool Register(const std::string & plugin_name, const Creator & creator) {
-        auto ret = _map.insert(std::make_pair(plugin_name, creator));
+    template<typename Derived>
+    bool Register(const std::string & plugin_name) {
+        CreatorFunc creator_func = Creator<Derived>;
+        auto ret = _map.insert(std::make_pair(plugin_name, creator_func));
         return ret.second;
     }
-    // do not return raw pointer directly, use smart pointer instead to transfer ownership to caller
+
+    // do not return raw pointer directly, use smart pointer
     std::unique_ptr<Base> Create(const std::string & plugin_name) {
         auto iter = _map.find(plugin_name);
         if (iter == _map.end()) return std::unique_ptr<Base>(nullptr);
         return std::unique_ptr<Base>((iter->second)());
     }
 private:
-    std::unordered_map<std::string, Creator> _map;
+    template<typename Derived>
+    static Derived* Creator() {
+        return new Derived();
+    }
+
+    std::unordered_map<std::string, CreatorFunc> _map;
     Factory() {}
 
     // forbid copy constructor and assign operation,
@@ -84,16 +92,9 @@ private:
     Factory & operator = (Factory &&) = delete;
 };
 
-template<typename Derived>
-Base* Creator() {
-    return new Derived();
-}
-
 // macro is used widely in many factory pattern implementation. But, macro is ugly, it make program hard to comprehend and debug, so avoid using it
 #define REGISTER_PLUGIN(CLASSNAME) \
-    namespace { \
-        static const auto CLASSNAME##register_result = Factory::Instance().Register(#CLASSNAME, Creator<CLASSNAME>); \
-    } \
+    static const auto CLASSNAME##register_result = Factory::Instance().Register<CLASSNAME>(#CLASSNAME); \
 
 #endif
 ```
@@ -166,4 +167,5 @@ g++ -std=c++11 main.cpp plugin1.cpp plugin2.cpp -o main
 ](https://stackoverflow.com/a/5451094/5432806)
 - [Compile-Time Plugin System(github)](https://gist.github.com/Cilyan/a8117124b04b64642646)
 - [Compile-time plugin system(stackoverflow)](https://codereview.stackexchange.com/questions/119812/compile-time-plugin-system)
-- [](https://stackoverflow.com/a/26950454/5432806)
+- [Implement the factory method pattern in C++ correctly
+](https://stackoverflow.com/a/26950454/5432806)
