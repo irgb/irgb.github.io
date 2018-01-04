@@ -1,5 +1,5 @@
 ---
-title: C++ 代码调试
+title: C++ 工厂模式
 date: 2018-01-04
 categories: C++
 tags: [c++ design-pattern factory-pattern]
