@@ -23,6 +23,7 @@ using namespace std;
 //before entering main function, all global (static) variables will be initialized, in which process plugins are registered to factory.
 int main() {
     Factory & factory = Factory::Instance();
+    //p1, p2 are unique_ptr<Base>. now p1 own new created plugin object.
     auto p1 = factory.Create("Plugin1");
     auto p2 = factory.Create("Plugin2");
     auto p3 = factory.Create("Plugin3");
@@ -63,7 +64,7 @@ public:
         auto ret = _map.insert(std::make_pair(plugin_name, creator));
         return ret.second;
     }
-
+    // do not return raw pointer directly, use smart pointer instead to transfer ownership to caller
     std::unique_ptr<Base> Create(const std::string & plugin_name) {
         auto iter = _map.find(plugin_name);
         if (iter == _map.end()) return std::unique_ptr<Base>(nullptr);
