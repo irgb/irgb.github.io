@@ -151,7 +151,11 @@ g++ -std=c++11 main.cpp plugin1.cpp plugin2.cpp -o main
 ```
 
 需要注意的是：
-1. 
+1. 上面的代码中 Factory 只能注册 Base 的子类，如果要实现通用的 Factory，可以给 Factory 加上模板。
+2. 这里的实现和 [Compile-Time Plugin System(github)](https://gist.github.com/Cilyan/a8117124b04b64642646) 中的实现是一致的，对应关系为：
+    - Factory <=> PluginFactory
+    - Creator <=> 
+
 
 #### Reference
 
