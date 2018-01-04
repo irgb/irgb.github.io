@@ -23,7 +23,7 @@ using namespace std;
 //before entering main function, all global (static) variables will be initialized, in which process plugins are registered to factory.
 int main() {
     Factory & factory = Factory::Instance();
-    //p1, p2 are unique_ptr<Base>. now p1 own new created plugin object.
+    //p1, p2 are unique_ptr<Base>, so caller own new created plugin object.
     auto p1 = factory.Create("Plugin1");
     auto p2 = factory.Create("Plugin2");
     auto p3 = factory.Create("Plugin3");
