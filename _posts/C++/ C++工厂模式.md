@@ -156,7 +156,7 @@ g++ -std=c++11 main.cpp plugin1.cpp plugin2.cpp -o main
 2. 这里的实现和 [Compile-Time Plugin System(github)](https://gist.github.com/Cilyan/a8117124b04b64642646) 中的实现是一致的，对应关系为：
 
  - Factory <=> PluginFactory
- - Creator <=> IPluginRegistrar
+ - CreatorFunc <=> IPluginRegistrar
  - Base <=> IPlugin
  - Plugin1, Plugin2 <=> Plugin1
 
