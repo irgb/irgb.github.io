@@ -23,10 +23,18 @@ using namespace std;
 //before entering main function, all global (static) variables will be initialized, in which process plugins are registered to factory.
 int main() {
     Factory & factory = Factory::Instance();
-    Base * p1 = factory.Create("Plugin1");
-    Base * p2 = factory.Create("Plugin2");
-    p1->do_something();
-    p2->do_something();
+    auto p1 = factory.Create("Plugin1");
+    auto p2 = factory.Create("Plugin2");
+    auto p3 = factory.Create("Plugin3");
+    if (p1) {
+        p1->do_something();
+    }
+    if (p2) {
+        p2->do_something();
+    }
+    if (p3) {
+        p3->do_something();
+    }
 }
 ```
 
@@ -56,10 +64,10 @@ public:
         return ret.second;
     }
 
-    Base* Create(const std::string & plugin_name) {
+    std::unique_ptr<Base> Create(const std::string & plugin_name) {
         auto iter = _map.find(plugin_name);
-        if (iter == _map.end()) return nullptr;
-        return (iter->second)();
+        if (iter == _map.end()) return std::unique_ptr<Base>(nullptr);
+        return std::unique_ptr<Base>((iter->second)());
     }
 private:
     std::unordered_map<std::string, Creator> _map;
