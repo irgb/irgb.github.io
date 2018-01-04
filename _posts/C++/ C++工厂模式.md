@@ -142,4 +142,7 @@ g++ -std=c++11 main.cpp plugin1.cpp plugin2.cpp -o main
 
 #### Reference
 
-- 
+- [C++ loop over all subclasses of an Abstract class?
+](https://stackoverflow.com/a/5451094/5432806)
+- [Compile-Time Plugin System](https://gist.github.com/Cilyan/a8117124b04b64642646)
+- [](https://codereview.stackexchange.com/questions/119812/compile-time-plugin-system)
