@@ -150,6 +150,9 @@ g++ -std=c++11 main.cpp plugin1.cpp plugin2.cpp -o main
 ./main
 ```
 
+需要注意的是：
+1. 
+
 #### Reference
 
 - [C++ loop over all subclasses of an Abstract class?
