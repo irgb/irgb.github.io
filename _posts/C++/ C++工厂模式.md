@@ -134,7 +134,8 @@ REGISTER_PLUGIN(Plugin2);
 ```
 
 **编译运行**
-
+上面的代码中再 Factory 中记录了所有 Plugin 的创建方法，每次 create 都会返回一个新的对象,
+将所有文件放到一个文件夹下，执行以下命令:
 ```shell
 g++ -std=c++11 main.cpp plugin1.cpp plugin2.cpp -o main
 ./main
