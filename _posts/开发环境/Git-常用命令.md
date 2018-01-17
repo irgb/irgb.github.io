@@ -13,7 +13,7 @@ tags: [git]
 2. git reset \--hard # removes staged and working directory changes
 3. git checkout /path/to/your/file # checkout a file from HEAD, and overwrite your change.
 
-## pring history graph
+## pring branch tree
 在`.gitconfig` 中添加：
 
 ```shell
