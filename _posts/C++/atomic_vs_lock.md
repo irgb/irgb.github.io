@@ -6,7 +6,8 @@ tags: [c++]
 ---
 
 下面的代码用 atomic 和 lock 分别实现了线程安全的计数器, 可以看到 atomic 的性能比 lock 提升了数十倍.
-正常开发中可以使用C++ 标准库中的 atomic<int>, 具有更高的性能, 比 lock 高百倍 
+正常开发中可以使用C++ 标准库中的 atomic<int>, 具有更高的性能, 比 lock 高百倍.
+另外, 标准库中的 atomic_flag 也可以当做自旋锁来使用.
 
 ```
 #include <iostream>
@@ -31,11 +32,12 @@ void unsafe_worker() {
 
 /**
   * 可以用 atomic<int> 轻易地实现线程安全的计数器,
-  * 这里用 atomic 实现排它锁, 主要是为了和 lock 做对比
+  * 这里用 atomic 实现自旋锁, 主要是为了和 lock 做对比
   */
 void atomic_worker() {
     for (int i = 0; i < iter_num; ++i) {
         bool expected = false;
+        // 自旋锁
         do {
             expected = false;
         } while (!atomic_lock.compare_exchange_weak(expected, true));
