@@ -2,13 +2,14 @@
 title: Git 常用命令
 date: 2017-04-04
 tags: [git]
+
 ---
 
 ## push tag:
 1. git push \<remote\> tag_name # push a single tag
 2. git push \<origin\> \--tags # push all tags
 
-## undo all changes:
+## undo all uncommit changes:
 1. git clean -fd # delete all untracked files and directories
 2. git reset \--hard # removes staged and working directory changes
 3. git checkout /path/to/your/file # checkout a file from HEAD, and overwrite your change.
@@ -26,16 +27,28 @@ lg = log --graph --abbrev-commit --decorate --format=format:'%C(cyan)%h%C(reset)
 **Reference**：
 
  - [Pretty git branch graphs
-](https://stackoverflow.com/a/9074343/5432806)  
+](https://stackoverflow.com/a/9074343/5432806)
  - [Git pretty format colors
-](https://stackoverflow.com/a/15458378/5432806)  
+](https://stackoverflow.com/a/15458378/5432806)
+
+## 回滚到指定 commit id
+```
+
+git reset --hard 0682c06
+HEAD is now at 0682c06
+$ git reset --soft HEAD@{1}
+$ git commit -m "Reverting to the state of the project at 0682c06"
+```
+**Reference**
+- https://stackoverflow.com/a/1895095/5432806
+- http://serebrov.github.io/html/2014-01-04-git-revert-multiple-recent-comments.html
+- https://stackoverflow.com/a/4114122/5432806
 
 ## save HTTPS account
-1. **(Recommended)** attach credential to remote repository url: `https://username:password@git.coding.net/username/repository.git`  
+1. **(Recommended)** attach credential to remote repository url: `https://username:password@git.coding.net/username/repository.git`
 1. store temporarily: execute command `git config credential.helper 'cache --timeout=60'`, then credential will expire after 60 seconds since last use.
 2. store permanently: execute command `git config --global credential.helper store`, then credential will be stored in file `~/.git-credentials` and `~/.gitconfig` permanently.
 
 **Reference**:
 
 - [git: revert (reset) a single file](http://www.norbauer.com/rails-consulting/notes/git-revert-reset-a-single-file.html)
-
