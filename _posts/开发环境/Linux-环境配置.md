@@ -40,7 +40,26 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 #### 修改 ssh server timeout 时间
 在 `/etc/ssh/sshd_config` 中添加:
 ```shell
+TCPKeepAlive yes
 ClientAliveInterval 120
 ClientAliveCountMax 720
 ```
 > The first one configures the server to send `null packets` to clients each 120 seconds and the second one configures the server to close the connection if the client has been inactive for 720 intervals that is `720*120 = 86400 seconds = 24 hours`
+
+---------------
+
+或者在客户端的`~/.ssh/config`中添加配置:
+```shell
+Host *
+ServerAliveInterval 60
+ServerAliveCountMax 3 # 不设置表示不停重试
+```
+
+#### ssh client 在不同窗口之间共享 session
+在`~/.ssh/config`中添加配置:
+```shell
+Host *
+ControlMaster auto
+ControlPersist 1000m
+ControlPath ~/.ssh/master-%r@%h:%p
+```
