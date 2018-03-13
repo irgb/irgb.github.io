@@ -2,6 +2,7 @@
 title: Linux 常用配置
 date: 2017-03-28
 tags: [Linux]
+
 ---
 
 #### `~/.inputrc` 配置
@@ -35,3 +36,11 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 > 参考资料：  
 > 1. [Preserve bash history in multiple terminal windows](https://unix.stackexchange.com/a/48113/205808)
+
+#### 修改 ssh server timeout 时间
+在 `/etc/ssh/sshd_config` 中添加:
+```shell
+ClientAliveInterval 120
+ClientAliveCountMax 720
+```
+> The first one configures the server to send `null packets` to clients each 120 seconds and the second one configures the server to close the connection if the client has been inactive for 720 intervals that is `720*120 = 86400 seconds = 24 hours`
