@@ -82,7 +82,7 @@ This is line1
 This is line1
 This is line2
 This is line2
-This is line2" | uniq
+This is line2" | sort | uniq
 ```
 
 > 结果为：  
@@ -92,9 +92,11 @@ This is line2" | uniq
 
 例子：
 ```shell
-echo "word1 word1 word2 word2 word2" | xargs -n1 | uniq -c
+echo "word1 word1 word2 word2 word2" | xargs -n1 | sort | uniq -c
 ```
 > 一个简单的 wordcount 程序。其中 `xargs -n1` 用于把每个单词转成一行。
+
+**ATTENTION:** 使用 uniq 之前必须经过 sort, 如果uniq 需要保持原来的顺序, 可以使用[命令](https://stackoverflow.com/a/11532197/5432806)`awk '!x[$0]++' filename`. 
 
 #### 文件排序
 ```shell
