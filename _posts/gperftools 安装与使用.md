@@ -1,3 +1,11 @@
+---
+title: gperftools 
+date: 2018-05-01
+categories: tools
+tags: [c++ tools]
+
+---
+
 ### 安装
 1. 下载 [gperftools-2.0.tar.gz](https://github.com/gperftools/gperftools/archive/gperftools-2.0.tar.gz)
 2. 执行以下命令安装:
