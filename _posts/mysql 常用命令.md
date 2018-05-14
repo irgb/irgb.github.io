@@ -1,3 +1,11 @@
+---
+title: mysql 常用命令
+date: 2018-05-01
+categories: mysql
+tags: [mysql]
+
+---
+
 ### 编码
 修改编码: `alter database mydb character set utf-8;`
 查看数据库的默认编码： `show variables like 'collation_%';` 和 `show variables like 'character\_set\_%';` 或者 `status`
